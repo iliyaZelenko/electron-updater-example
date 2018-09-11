@@ -17,10 +17,10 @@
   },
   "build": {
     "appId": "com.github.iliyaZelenko.electron-updater-example",
-    "win": {
-      "publish": {
-        "provider": "github"
-      }
-    }
+	"publish": [{
+		"provider": "github",
+		"owner": "iliyaZelenko",
+		"repo": "electron-updater-example"
+	}]
   }
 }
