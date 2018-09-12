@@ -77,7 +77,7 @@ autoUpdater.on('update-not-available', (info) => {
   sendStatusToWindow('Update not available.');
 })
 autoUpdater.on('error', (err) => {
-  sendStatusToWindow('Error in auto-updater!!! Here3: ' + err);
+  sendStatusToWindow('Error in auto-updater: ' + err);
 })
 autoUpdater.on('download-progress', (progressObj) => {
   let log_message = "Download speed: " + progressObj.bytesPerSecond;
@@ -109,9 +109,9 @@ app.on('window-all-closed', () => {
 // This will immediately download an update, then install when the
 // app quits.
 //-------------------------------------------------------------------
-app.on('ready', function()  {
-  autoUpdater.checkForUpdatesAndNotify();
-});
+// app.on('ready', function()  {
+//   autoUpdater.checkForUpdatesAndNotify();
+// });
 
 //-------------------------------------------------------------------
 // Auto updates - Option 2 - More control
